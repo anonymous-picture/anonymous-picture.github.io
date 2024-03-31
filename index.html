@@ -24,8 +24,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <title>Point Cloud Reconstruction Is Insufficient to Learn 3D Representations</title>
+  <link rel="icon" type="image/x-icon" href="static/images/PICTURE_icon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -52,50 +52,22 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Point Cloud Reconstruction Is Insufficient to Learn 3D Representations</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
+                Anonymous Author</span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">Institution Name<br>ACM Multimedia 2024</span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/authoranonymous795/PICTURE" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -103,17 +75,6 @@
                     <span>Code</span>
                   </a>
                 </span>
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
             </div>
           </div>
         </div>
@@ -129,11 +90,14 @@
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
+        <source src="static/videos/overview_480p_speed.mp4"
         type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      <!-- <h2 class="subtitle has-text-centered"> -->
+      <h2 style="text-align: left; font-size: 20px;">
+        <b>We conduct a careful study seeking answers to several questions:</b>
+          <br>(1) What is the promotion of high-level features in 2D images?
+          <br>(2) Are low-level features in 3D point clouds sufficient as pretext tasks?
       </h2>
     </div>
   </div>
@@ -148,7 +112,18 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            This paper revisits the development of generative self-supervised learning in 2D images and 3D point clouds. In 2D images, 
+            the pretext tasks have evolved from low-level features to high-level features. Inspired by this, through explore model 
+            analysis, we find that the gap in weight distribution between self-supervised learning and supervised learning is 
+            substantial when employing only low-level features as pretext tasks in 3D point clouds. Low-level features represented 
+            by <b>P</b>o<b>I</b>nt <b>C</b>loud recons<b>T</b>ruction are ins<b>U</b>fficient for learning 3D <b>RE</b>presentations (dubbed <b>PICTURE</b>). To advance the development 
+            of pretext tasks, we propose a unified self-supervised generation framework. Firstly, high-level features represented by 
+            the Seal feature are demonstrated to exhibit semantic consistency with downstream tasks. We utilize the Seal feature as 
+            an additional pretext task to enhance the understanding of semantic information during the pretraining. Next, we propose 
+            inter-class and intra-class discrimination-guided masking (I2Mask) based on the attributes of the Seal feature, 
+            adaptively setting the masking ratio for each superclass. On Waymo and nuScenes datasets, we achieved 75.13% mAP and 72.69% mAPH
+             for 3D object detection, 79.4% mIoU for 3D semantic segmentation, and 18.4% mIoU for occupancy prediction. Extensive 
+             experiments have demonstrated the effectiveness and necessity of high-level features.
           </p>
         </div>
       </div>
@@ -157,62 +132,30 @@
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
 <!-- Youtube video -->
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+      <h2 class="title is-4">The Evolution Process of Pretext Tasks</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
+          <h2 style="text-align: left;">
+            In <b>2D images</b>, At the beginning, MAE explicitly reconstructed missing raw pixels in low-level to understand
+             the image content. Subsequently, MaskFeat and MR-MAE et al. reconstructed high-level
+              features such as HOG and CLIP features. This has been proven to facilitate the interpretation of the image content.
+            <br>In <b>3D point clouds</b>, Occupancy-MAE predicts whether each masked voxel is occupied. 
+            This promotes scene understanding by inferring the composition information of 3D scenes. The reconstruction target
+             of GD-MAE is to reconstruct the 3D coordinates of the point clouds in each masked voxel. 
+             GeoMAE further introduces geometric features e.g. normal to enhance spatial understanding. 
+             MV-JAR combines jigsaw and mask autoencoder to understand the spatial relationship between voxels.
+            <br>In this work, we argue that <b>the representation learning in 3D point clouds is equivalent to the primitive stage of 2D images.</b> 
+          </h2>
+          <!-- <img src="static/images/figure_1.jpg" alt="MY ALT TEXT"/> -->
+          <img src="static/images/figure_1.jpg" alt="MY ALT TEXT" style="width: 50%; height: auto;"/>
+          <h2 style="text-align: center;">
+              <br><b>Figure 1: </b>Differences in the evolution process of pretext tasks between 2D images and 3D point clouds.
+          </h2>
         </div>
       </div>
     </div>
@@ -220,87 +163,184 @@
 </section>
 <!-- End youtube video -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
+<!-- Youtube video -->
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+      <!-- Paper video. -->
+      <h2 class="title is-4">Exploratory Model Analysis</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 style="text-align: left;">
+            Pretext tasks play a pivotal role in self-supervised representation learning. Appropriate pretext tasks guide network
+             to find generic features from the feature space. Further, the feature extraction may be quantitatively represented
+              as weights. <b>Therefore, we explore the differences between pretext tasks from the perspective of weights.</b> We select
+               the weights of the value nodes in all attention layers of the encoder as our research subject, including the weights from multi heads. 
+               We assume the weight distribution derived from supervised learning serves as the ideal weight distribution for self-supervised learning. 
+               Fig. 5 visualize the disparity in the weight distribution of each attention layer, which are the mean and variance. We use differences to measure disparity, without loss of generality.
+          </h2>
+          <!-- <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/> -->
+          <!-- <div class="image-grid"> -->
+            <div class="image-grid">
+            <div class="image-container">
+                <img src="static/images/figure_5_a.jpg" alt="Image 1" style="width: 75%; height: auto;"/>
+                <p>(a)</p>
+            </div>
+            <div class="image-container">
+                <img src="static/images/figure_5_b.jpg" alt="Image 2" style="width: 75%; height: auto;"/>
+                <p>(b)</p>
+            </div>
+            <div class="image-container">
+                <img src="static/images/figure_5_c.jpg" alt="Image 3" style="width: 75%; height: auto;"/>
+                <p>(c)</p>
+            </div>
+            <div class="image-container">
+                <img src="static/images/figure_5_d.jpg" alt="Image 4" style="width: 75%; height: auto;"/>
+                <p>(d)</p>
+            </div>
+        </div>
+          <h2 style="text-align: center;">
+              <br><b>Figure 5: </b>The disparity in the weight distribution of each attention layer in the encoder. 
+              (a) and (b) represent 2D images, while (c) and (d) correspond to 3D point clouds.
+          </h2>
         </div>
       </div>
     </div>
   </div>
-</footer>
+</section>
+<!-- End youtube video -->
+
+<!-- Youtube video -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+      <h2 class="title is-4">Proposed Method</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <img src="static/images/figure_2.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+          <h2 style="text-align: left;">
+              <br><b>PICTURE</b>: (a) The self-supervised learning process in 3D point clouds. (b) Architecture overview of unified generation self-supervised 
+              framework PICTURE. The raw 3D point clouds are fed into (c) the 3D high-level voxel feature generation module to 
+              obtain Seal voxel features. (d) Inter-class and intra-class discrimination-guided masking strategy is applied 
+              based on the attributes of Seal voxel features. 
+          </h2>
+          <h2 style="text-align: left;">
+            <b>Reconstruction Target.</b> The Seal feature heatmaps for example point cloud scene in nuScenes are shown 
+            in Fig. 3(a). At the same time, the ground truth of the same scene in three downstream tasks are visualized in 
+            Fig. 3(b). It can be seen  Seal feature and the real scene have a high semantic consistency. On the one hand, 
+            the Seal feature is strong for road-related objects. On the other hand, the feature decreases with distance from ego. Based
+             on this observation, we consider reconstructing Seal features as an additional pretext task. Specifically, all raw point 
+             clouds that have not been voxelized are fed into the MinkUNet (Res16UNet34C) pre-trained by Seal. Each point cloud aggregates
+              spatial and feature information from other point clouds. We obtain the point cloud Seal feature. Subsequently, we voxelize 
+              in the same way as inference. The average pooling is employed to aggregate sparse features that are located in the same voxel.
+               This aggregation is based on the unique sparse coordinates. Finally, we obtain the Seal features of all non-empty voxels.
+          <br><b>Inter-class and Intra-class Discrimination-guided Masking.</b> Firstly, 8 superclasses that can represent autonomous driving
+           scenarios are obtained in an unsupervised manner. On the one hand, for inter-class, we propose Fastest Class Sampling (FCS), 
+           which divides 8 superclasses into 3 groups based on discriminative cues and sets base mask ratios. On the other hand, we define
+            intra-class consistency coefficient for each superclass and modulate the base mask ratios, which helps to adjust the difficulty 
+            level of the reconstruction task.
+          </h2>
+          <!-- <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/> -->
+          <div class="image-grid">
+            <div class="image-container">
+                <img src="static/images/figure_3.png" alt="Image 1" style="width: 75%; height: auto;"/>
+                <p><b>Figure 3</b>: (a) Heatmap for ground truth Seal feature and encoder output pretrained w/o and w/ Seal feature.
+                   (b) Ground truth visualization for detection, segmentation, and occupancy prediction.</p>
+            </div>
+            <div class="image-container">
+                <img src="static/images/algo_1.png" alt="Image 2" style="width: 75%; height: auto;"/>
+                <p><b>Algorithm 1</b>: Fastest Class Sampling</p>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End youtube video -->
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-4">Visualization</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="image-container">
+        <!-- Your image here -->
+        <!-- <img src="static/images/figure_4.png" alt="MY ALT TEXT"/> -->
+        <img src="static/images/figure_4.png" alt="Image 1" style="width: 60%; height: auto;"/>
+        <h2 class="subtitle has-text-centered">
+          <b>Figure 4</b>: (a) Ground truth visualization of occupancy prediction. (b) The mask ratio distribution of a certain scene derived by I2Mask.
+        </h2>
+      </div>
+      <div class="image-container">
+        <!-- Your image here -->
+        <!-- <img src="static/images/figure_d1.png" alt="MY ALT TEXT"/> -->
+        <img src="static/images/figure_d1.png" alt="Image 1" style="width: 30%; height: auto;"/>
+        <h2 class="subtitle has-text-centered">
+          <b>Figure D.1</b>: Heatmaps for more scenes. Each row represents a scene.
+        </h2>
+      </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-4">Experimental Results</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="image-container">
+        <img src="static/images/table_1.png" alt="Image 1" style="width: 75%; height: auto;"/>
+        <h2 class="subtitle has-text-centered">
+          <b>Table 1</b>: Comparisons of 3D object detection between PICTURE and other self-supervised learning methods onWaymo validation set.
+          † indicates the results are from the original paper. ∗ presents re-implemented by OpenPCDet. ‘Epochs’ and ‘Fraction’ denote the pre-training
+          epochs and dataset fraction used for pre-training. The improvement compared to training from scratch is indicated with red superscripts.
+        </h2>
+      </div>
+      <div class="image-container">
+        <img src="static/images/table_2.png" alt="Image 1" style="width: 55%; height: auto;"/>
+        <h2 class="subtitle has-text-centered">
+          <b>Table 2</b>: Comparisons of 3D semantic segmentation between PICTURE and other self-supervised learning methods on nuScenes val set.
+        </h2>
+        <img src="static/images/table_3.png" alt="Image 1" style="width: 40%; height: auto;"/>
+        <h2 class="subtitle has-text-centered">
+          <b>Table 3</b>: Comparisons of 3D object detection on Waymo test set.
+        </h2>
+      </div>
+      <div class="image-container">
+        <img src="static/images/table_5.png" alt="Image 1" style="width: 30%; height: auto;"/>
+        <h2 class="subtitle has-text-centered">
+          <b>Table 5</b>: Ablation study of pretraining, reconstruction target, and
+          mask sampling strategy on the Waymo val set.
+        </h2>
+        <img src="static/images/table_6.png" alt="Image 1" style="width: 30%; height: auto;"/>
+        <h2 class="subtitle has-text-centered">
+          <b>Table 6</b>: Ablation study of different high-level features for pretext
+          task in 3D object detection on Waymo val set.
+        </h2>
+      </div>
+      <div class="image-container">
+        <img src="static/images/table_d9.png" alt="Image 1" style="width: 40%; height: auto;"/>
+        <h2 class="subtitle has-text-centered">
+          <b>Table D.9</b>: Time cost of self-supervised learning methods during
+          pre-training on 8 A100-SXM4-40GB GPUs on Waymo dataset.
+        </h2>
+        <img src="static/images/table_d10.png" alt="Image 1" style="width: 45%; height: auto;"/>
+        <h2 class="subtitle has-text-centered">
+          <b>Table D.10</b>: Comparisons of different mask sampling strategy.
+        </h2>
+      </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
 
 <!-- Statcounter tracking code -->
   

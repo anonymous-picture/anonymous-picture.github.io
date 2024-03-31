@@ -110,8 +110,13 @@ body {
 .publication-body img {
 }
 
+.title.is-4 {
+  margin-left: 100px;
+}
+
 .results-carousel {
   overflow: hidden;
+  margin-left: 50px;
 }
 
 .results-carousel .item {
@@ -119,6 +124,8 @@ body {
   overflow: hidden;
   padding: 20px;
   font-size: 0;
+  align-items: center;
+  justify-content: center;
 }
 
 .results-carousel video {
@@ -132,6 +139,31 @@ body {
 .eql-cntrb { 
   font-size: smaller;
 }
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 两列 */
+  grid-template-rows: auto; /* 行高度自适应 */
+  gap: 10px; /* 根据需要调整间隙 */
+}
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.image-container img {
+  width: 75%; /* 根据需要调整宽度 */
+  height: auto; /* 保持图像比例 */
+  margin-bottom: 10px; /* 在图像和文本之间添加空间 */
+}
+
+.image-container p {
+  text-align: center; /* 文本居中显示 */
+}
+
 
 
 
